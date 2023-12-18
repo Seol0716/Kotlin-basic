@@ -128,15 +128,31 @@
    - 구문 수행
    - init과 constructor 두개의 함수를 이용해 초기화 할 수 있다.
 
+   ###### 주 생성자
+   - 주 생성자는 하나밖에 생성이 가능하다
+   - 클래스 이름 옆에 괄호안에 매개변수를 명시해주면 주 생성자가 된다
+   - 파라미터 앞에 var, val 타입을 지정을 해주면 프로퍼티 정의와 초기화를 간략히 할 수 있다.
+     
+     '''
+     class person(val name : String, val age : Int){
+     var phoneNumber = ""
 
+     init {
+        this.name
+        this.age
+    }
+
+     '''   
+   - constroctor 키워드를 생략가능
+   -  초기화는 init 내에서 한다
+   
    ##### init 함수
-   - parameter와 arguments 지정이 불가능하다
-   - 생성자를 통해 인스턴스가 만들어 질 때 호출된다
+   - 멤버 변수들을 초기화 할 때 사용된다
 
    ###### Constructor 함수
-   - 인스턴스를 생성시 추가적인 구문을 실핼 할 수 있게 해준다
+   - 부 생성자로 사용한다.
+   - 부 생성자는 여러 개 만들 수 있으며 매개 변수의 개수에 따라 메서드 오버라이딩이 가능하다.
    - constructor 함수를 만들경우 init 함수를 먼저 초기화 해야한다
-   - init 함수와 달리 parameter 생성이 가능하고 arguments 지정이 가능하다
      
   ### 객체지향
    - 개체에 대한 여러 정보들을 담는다
